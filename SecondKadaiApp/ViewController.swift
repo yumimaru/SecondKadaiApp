@@ -8,11 +8,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textfield.text = ""
     }
     //2画面目に遷移される際に実行されるメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nameData:ResultViewController = segue.destination as! ResultViewController
+        let nameData = segue.destination as! ResultViewController
         nameData.resultText =  textfield.text! //ResultViewControllerのresultTextにtextfieldのtextを代入
     }
     
