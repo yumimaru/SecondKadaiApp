@@ -1,20 +1,25 @@
-//
-//  ViewController.swift
-//  SecondKadaiApp
-//
-//  Created by 長裕美子 on 2019/03/23.
-//  Copyright © 2019 yumimaru. All rights reserved.
-//
+
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var textfield: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        textfield.text = ""
     }
-
-
+    //2画面目に遷移される際に実行されるメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nameData:ResultViewController = segue.destination as! ResultViewController
+        nameData.resultText =  textfield.text! //ResultViewControllerのresultTextにtextfieldのtextを代入
+    }
+    
+    //戻るボタンで1画面目に遷移するSegue
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
+    
 }
 
