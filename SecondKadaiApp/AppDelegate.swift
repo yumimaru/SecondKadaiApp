@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  SecondKadaiApp
-//
-//  Created by 長裕美子 on 2019/03/23.
-//  Copyright © 2019 yumimaru. All rights reserved.
-//
+
 
 import UIKit
 
